@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.staggeredgrid.LazyVerticalStaggeredGrid
@@ -39,11 +40,14 @@ fun MainScreen(viewModel: MainViewModel = hiltViewModel(), paddingValues: Paddin
         }
     }
 
-    when {
-        state.isLoading -> LoadingView()
-        state.errorMessage != null -> Toast.makeText(context, state.errorMessage, Toast.LENGTH_SHORT).show()
-        else -> NowPlayingMoviesView(nowPlayingMovies = state.nowPlayingMovies)
+    Box(modifier = Modifier.padding(paddingValues)) {
+        when {
+            state.isLoading -> LoadingView()
+            state.errorMessage != null -> Toast.makeText(context, state.errorMessage, Toast.LENGTH_SHORT).show()
+            else -> NowPlayingMoviesView(nowPlayingMovies = state.nowPlayingMovies)
+        }
     }
+
 }
 
 @Composable
