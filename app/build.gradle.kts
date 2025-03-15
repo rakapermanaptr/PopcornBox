@@ -1,11 +1,13 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.dagger.hilt)        // Dagger-Hilt for dependency injection
+    alias(libs.plugins.kotlin.kapt)        // Kotlin annotation processor plugin (KAPT)
 }
 
 android {
     namespace = "com.creospace.popcornbox"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.creospace.popcornbox"
@@ -66,4 +68,15 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.logging.interceptor)
+
+    implementation(libs.hilt.android)                    // Hilt Android dependency
+    implementation(libs.androidx.hilt.navigation.compose)
+    kapt(libs.hilt.compiler)                             // Hilt annotation processor
+
+//    implementation(libs.coil.compose)
+    implementation(libs.coil.kt.coil.compose)
 }

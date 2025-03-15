@@ -1,4 +1,4 @@
-package com.creospace.popcornbox.ui.theme
+package com.creospace.popcornbox.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

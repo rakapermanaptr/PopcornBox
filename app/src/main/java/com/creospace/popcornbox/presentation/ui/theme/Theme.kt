@@ -1,4 +1,4 @@
-package com.creospace.popcornbox.ui.theme
+package com.creospace.popcornbox.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build
