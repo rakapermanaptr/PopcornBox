@@ -1,4 +1,4 @@
-package com.creospace.popcornbox.data.remote.utils
+package com.creospace.popcornbox.data.resource.remote.utils
 
 sealed class Resource<out T> {
     data object Loading : Resource<Nothing>()

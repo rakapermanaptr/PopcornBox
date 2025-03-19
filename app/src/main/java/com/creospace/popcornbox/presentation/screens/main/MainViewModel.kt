@@ -3,7 +3,7 @@ package com.creospace.popcornbox.presentation.screens.main
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.creospace.popcornbox.data.mapper.toMovies
-import com.creospace.popcornbox.data.remote.utils.Resource
+import com.creospace.popcornbox.data.resource.remote.utils.Resource
 import com.creospace.popcornbox.domain.model.Movie
 import com.creospace.popcornbox.domain.repository.PopcornBoxRepository
 import dagger.hilt.android.lifecycle.HiltViewModel

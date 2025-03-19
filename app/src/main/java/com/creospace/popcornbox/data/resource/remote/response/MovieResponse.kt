@@ -1,4 +1,4 @@
-package com.creospace.popcornbox.data.remote.response
+package com.creospace.popcornbox.data.resource.remote.response
 
 
 import com.google.gson.annotations.SerializedName

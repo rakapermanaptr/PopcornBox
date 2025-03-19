@@ -3,7 +3,7 @@ package com.creospace.popcornbox.data.di
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import com.creospace.popcornbox.data.remote.ApiService
+import com.creospace.popcornbox.data.resource.remote.ApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

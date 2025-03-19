@@ -1,4 +1,4 @@
-package com.creospace.popcornbox.data.remote.utils
+package com.creospace.popcornbox.data.resource.remote.utils
 
 import android.util.MalformedJsonException
 import com.google.gson.JsonParseException

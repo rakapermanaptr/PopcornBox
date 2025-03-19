@@ -1,6 +1,6 @@
 package com.creospace.popcornbox.data.di
 
-import com.creospace.popcornbox.data.repository.PopcornBoxRepositoryImpl
+import com.creospace.popcornbox.data.PopcornBoxRepositoryImpl
 import com.creospace.popcornbox.domain.repository.PopcornBoxRepository
 import dagger.Binds
 import dagger.Module
@@ -17,4 +17,5 @@ abstract class AppModule {
     abstract fun bindRepository(
         popcornBoxRepositoryImpl: PopcornBoxRepositoryImpl
     ): PopcornBoxRepository
+
 }
