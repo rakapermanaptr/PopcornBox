@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "PopcornBox"
 include(":app")
+include(":utilities")
