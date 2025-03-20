@@ -16,7 +16,11 @@ fun AppNavHost(
 ) {
     NavHost(navController = navController, startDestination = startDestination) {
         composable(NavigationItem.Home.route) {
-            MainScreen()
+            MainScreen(
+                toDetails = {
+                    navController.navigate(Screen.DETAILS.name)
+                }
+            )
         }
         composable(NavigationItem.Details.route) {
             MovieDetailsScreen()

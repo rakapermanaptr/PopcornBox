@@ -40,6 +40,7 @@ import kotlinx.coroutines.launch
 @Composable
 fun MainScreen(
     viewModel: MainViewModel = hiltViewModel(),
+    toDetails: () -> Unit
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val scope = rememberCoroutineScope()
@@ -68,9 +69,7 @@ fun MainScreen(
         NowPlayingContent(
             isLoading = uiState.isLoading,
             nowPlayingMovies = uiState.nowPlayingMovies,
-            onItemClicked = {
-
-            },
+            onItemClicked = toDetails,
             modifier = Modifier.padding(paddingValues)
         )
 
